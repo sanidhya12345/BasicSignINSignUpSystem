@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registration_form_design.css">
+    <title>Registration</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="signup-details">
+            <h1>Registration</h1>
+            <div class="form-container log-in-container">
+                <form id="registrationform">
+                    <div class="imgcontainer">
+                        <img src="./assets/login.png" alt="" class="avatar">
+                    </div>
+                    <input type="email" placeholder="Email" id="email" />
+                    <input type="text" placeholder="Re-Email" id="re-email" />
+                    <input type="text" placeholder="Password" id="password" />
+                    <button type="submit" class=" signup">Sign Up</button>
+                </form>
+                <h5>OR</h5>
+                <p>
+                    Already have an account?
+                    <a href="login_page_design.html">Login Here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+
+    <script src="registration.js"></script>
+</body>
+
+</html>

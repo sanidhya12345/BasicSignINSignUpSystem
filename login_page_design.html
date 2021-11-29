@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login_page_design.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-details">
+            <h1>Login</h1>
+            <div class="form-container log-in-container">
+                <form action="#">
+                    <div class="imgcontainer">
+                        <img src="./assets/login.png" alt="" class="avatar">
+                    </div>
+                    <input type="email" id="login-email" placeholder="Email" />
+                    <input type="password" id="login-password" placeholder="Password" />
+                    <a href="#">Forgot your password?</a>
+                    <button class="login" onclick="login()">Log In</button>
+                </form>
+                <h5>OR</h5>
+                <p>
+                    Don't have an account?
+                    <a href="registration_form_design.html">Create a Mars Funds Account</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDX8-8eJ5pDPw0QVATQFle6w-NMA80oy9I",
+            authDomain: "registration-form-b65ec.firebaseapp.com",
+            databaseURL: "https://registration-form-b65ec-default-rtdb.firebaseio.com",
+            projectId: "registration-form-b65ec",
+            storageBucket: "registration-form-b65ec.appspot.com",
+            messagingSenderId: "734536718472",
+            appId: "1:734536718472:web:314e67f899a9762edee73d",
+            measurementId: "G-KHT4LGVQ5Y"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const login = () => {
+            const email = document.querySelector("#login-email").value;
+            const password = document.querySelector("#login-password").value;
+
+            if (email.trim() == "") {
+                alert("Enter Email");
+            } else if (password.trim() == "") {
+                alert("Enter Password");
+            } else {
+                authenticate(email, password);
+                window.close();
+            }
+        };
+        const authenticate = (email, password) => {
+            const auth = firebase.auth();
+            auth.signInWithEmailAndPassword(email, password);
+            firebase
+                .auth()
+                .signInWithEmailAndPassword(email, password)
+                .catch(function (error) {
+                    // Handle Errors here.
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    alert(errorMessage);
+                });
+        };
+
+    </script>
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+/** @format */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("./assets/Sweet-space.png");
+  background-size: cover;
+}
+img {
+  vertical-align: middle;
+  height: 680px;
+}
+.container {
+  width: 30%;
+  height: 700px;
+  background-color: azure;
+  margin: auto;
+  border-radius: 20px;
+  margin-top: 100px;
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+p {
+  text-align: center;
+  margin-top: 20px;
+}
+input {
+  background-color: white;
+  border-radius: 10px;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 79%;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+label {
+  text-align: left;
+}
+.imgcontainer .avatar {
+  width: 100px;
+  height: 100px;
+  margin-top: 5px;
+}
+.signup {
+  border-radius: 20px;
+  border: 1px solid #ff4b2b;
+  background-color: #ff4b2b;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  margin-top: 20px;
+}
+h1 {
+  text-align: center;
+  margin-top: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 25px;
+  font-style: italic;
+  font-size: 22px;
+}
+h5 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 15px;
+}
+.signup-details {
+  float: left;
+  width: 100%;
+  height: 680px;
+}
+.numbertext {
+  color: black;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
